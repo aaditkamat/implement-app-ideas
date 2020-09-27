@@ -1,7 +1,7 @@
 import React, { useState }from "react"
 import "./InputBox.css"
 
-const InputBox = ({ setInputBinary }) => {
+const InputBox = ({ setInputBinary, setShowResults }) => {
     const [warnUser, setWarnUser] = useState(false)
 
     const isFormattedCorrectly = (inputValue) => {
@@ -14,6 +14,7 @@ const InputBox = ({ setInputBinary }) => {
     }
 
     const handleChange = (e) => {
+        setShowResults(false)
         const inputValue = e.target.value
         if (isFormattedCorrectly(inputValue)) {
             setWarnUser(false)
@@ -23,10 +24,14 @@ const InputBox = ({ setInputBinary }) => {
         }
     }
 
+    const handleSubmit = () => {
+        setShowResults(true)
+    }
+
     return (
         <React.Fragment>
             <input onChange={handleChange} size="8" maxLength="8" className={warnUser ? 'input-red': 'normal-input'}/>
-            <input type="submit" value="Convert to Binary"/>
+            <input type="submit" disabled={warnUser} onClick={handleSubmit} value="Convert to Binary"/>
             <br />
             {
                 warnUser ? <span style={{color: 'red'}}> The digits entered must be either 0 or 1 </span>  : <span></span>

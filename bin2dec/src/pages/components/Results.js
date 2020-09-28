@@ -1,9 +1,10 @@
 import React from 'react'
+import './Results.css'
 
 const Results = ({inputBinary}) =>  {
     return (
-        <div style={{marginLeft: "15px"}}>
-            <span> Decimal Output: {parseInt(inputBinary, 2)} </span>
+        <div className="results">
+            Decimal Output: {parseInt(inputBinary, 2)}
         </div>
     )
 }

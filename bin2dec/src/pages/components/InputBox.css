@@ -1,9 +1,5 @@
 input {
-    padding: 15px 10em 15px 10em;
-}
-
-span {
-    font-size: xx-large;
+    padding: 15px 7em 15px 7em;
 }
 
 .row {
@@ -11,10 +7,20 @@ span {
 }
 
 button.btn.btn-primary {
-    padding: 15px 5em 15px 5em;
+    padding: 15px 3em 15px 3em;
     text-align: center;
 }
 
 .input-red {
     border: 2px solid red;
+}
+
+.message {
+    margin-left: 15px;
+    margin-top: 2em;
+    font-size: xxx-large;
+}
+
+.message .warning{
+    color: 'red';
 }

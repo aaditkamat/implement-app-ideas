@@ -1,5 +1,7 @@
-import React, { useState }from "react"
-import "./InputBox.css"
+import React, { useState } from 'react'
+import './InputBox.css'
+import Button from 'react-bootstrap/Button'
+import { Row, Col } from 'react-bootstrap'
 
 const InputBox = ({ setInputBinary, setShowResults }) => {
     const [warnUser, setWarnUser] = useState(false)
@@ -30,8 +32,8 @@ const InputBox = ({ setInputBinary, setShowResults }) => {
 
     return (
         <React.Fragment>
-            <input onChange={handleChange} size="8" maxLength="8" className={warnUser ? 'input-red': 'normal-input'}/>
-            <input type="submit" disabled={warnUser} onClick={handleSubmit} value="Convert to Binary"/>
+            <Col><input style={{fontSize: 'x-large'}} onChange={handleChange} size="8" maxLength="8" className={warnUser ? 'input-red': 'normal-input'}/></Col>
+            <Col><Button variant="primary" disabled={warnUser} onClick={handleSubmit}>Convert to Binary</Button></Col>
             <br />
             {
                 warnUser ? <span style={{color: 'red'}}> The digits entered must be either 0 or 1 </span>  : <span></span>

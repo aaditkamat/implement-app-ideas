@@ -1,3 +1,20 @@
+input {
+    padding: 15px 10em 15px 10em;
+}
+
+span {
+    font-size: xx-large;
+}
+
+.row {
+    margin-top: 5em;
+}
+
+button.btn.btn-primary {
+    padding: 15px 5em 15px 5em;
+    text-align: center;
+}
+
 .input-red {
     border: 2px solid red;
 }

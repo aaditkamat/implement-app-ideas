@@ -2,9 +2,7 @@ import React from 'react'
 
 const Results = ({inputBinary}) =>  {
     return (
-        <div>
-            <span> Binary Input: {inputBinary} </span>
-            <br />
+        <div style={{marginLeft: "15px"}}>
             <span> Decimal Output: {parseInt(inputBinary, 2)} </span>
         </div>
     )

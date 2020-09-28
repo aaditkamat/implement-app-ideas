@@ -36,7 +36,7 @@ const InputBox = ({ setInputBinary, setShowResults }) => {
             <Col><Button variant="primary" disabled={warnUser} onClick={handleSubmit}>Convert to Binary</Button></Col>
             <br />
             {
-                warnUser ? <span style={{color: 'red'}}> The digits entered must be either 0 or 1 </span>  : <span></span>
+                warnUser ? <span style={{color: 'red', marginLeft: '15px'}}> The digits entered must be either 0 or 1 </span>  : <span></span>
             }
         </React.Fragment>
     )
